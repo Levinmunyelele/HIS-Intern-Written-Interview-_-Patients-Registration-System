@@ -1,0 +1,53 @@
+
+Patient Registration Fo
+This is a simple web application for patient registration. It allows users to fill out a form with patient details and submit the form. Upon submission, the data is stored in a MySQL database, and an email with a patient reference number is sent to the provided email address.
+
+Features
+Patient registration form with fields for personal information and next of kin details.
+Validation of required fields on the form before submission.
+Data is saved to a MySQL database.
+An email confirmation is sent to the patient after successful form submission, containing a unique reference number.
+
+Technologies Used
+PHP
+MySQL
+HTML
+CSS
+JavaScript
+
+SeSetup and Usage
+Database Setup:
+
+Create a MySQL database named patients_form.
+Create a table named patients with the following columns:
+patient_id (INT, AUTO_INCREMENT, PRIMARY KEY)
+name (VARCHAR, 100, NOT NULL)
+date_of_birth (DATE, NOT NULL)
+id_number (VARCHAR, 20, NOT NULL)
+address (VARCHAR, 200, NOT NULL)
+county (VARCHAR, 50, NOT NULL)
+sub_county (VARCHAR, 50)
+telephone (VARCHAR, 20)
+email (VARCHAR, 100)
+gender (VARCHAR, 10)
+marital_status (VARCHAR, 20)
+next_of_kin_name (VARCHAR, 100)
+next_of_kin_date_of_birth (DATE)
+next_of_kin_id_number (VARCHAR, 20)
+next_of_kin_gender (VARCHAR, 10)
+next_of_kin_relationship (VARCHAR, 50)
+next_of_kin_telephone (VARCHAR, 20)
+Application Setup:
+
+Clone this repository to your local machine or download the ZIP file and extract it.
+Place the project files inside your web server's root directory (e.g., htdocs for XAMPP, www for WAMP).
+Update the database connection parameters in submit.php with your MySQL credentials.
+Start the Application:
+
+Start your web server and MySQL database server.
+Access the application by opening a web browser and navigating to http://localhost/<path_to_your_project>/index.php.
+Fill out the patient registration form and click the "Submit" button.
+You should see a success message, and an email will be sent to the provided email address with a patient reference number.
+Email Configuration:
+
+The application uses the PHP mail() function to send confirmation emails. Ensure that your server is configured to send emails. In some cases, additional configuration may be required to handle emails properly.
